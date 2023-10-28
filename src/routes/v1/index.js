@@ -11,6 +11,11 @@ const { BookingController } = require("../../controllers/index");
 // const bookingController = new BookingController();
 
 router.post("/bookings", BookingController.create);
+router.get("/info", (req, res) => {
+  return res.json({
+    message: "From Booking Service Routes",
+  });
+});
 // router.post("/publish", bookingController.sendMessageToQueue);
 
 module.exports = router;
